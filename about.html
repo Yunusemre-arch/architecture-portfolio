@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEB | About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        window.addEventListener('DOMContentLoaded', () => {
+            const themeCheckbox = document.getElementById('theme-checkbox');
+            if (themeCheckbox && savedTheme === 'light') themeCheckbox.checked = true;
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">YEB.</a>
+            <ul class="nav-links">
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="architecture.html">Architecture</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="theme-checkbox">
+                            <input type="checkbox" id="theme-checkbox" />
+                            <div class="slider round">
+                                <div class="knob">
+                                    <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                                    <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <main id="main-content">
+            <div class="about-layout">
+                <div class="about-biography hidden-reveal">
+                    <h1>Yunus Emre Bilgin</h1>
+                    <p class="profile-subtitle">Architecture Student</p>
+                    <p class="biography-text">
+                        I am currently pursuing my undergraduate degree at Mimar Sinan Fine Arts University, Faculty of Architecture. In my designs, I focus on urban fabric analysis, structural logic, and form-space relationships. I aim to develop unique architectural languages by combining digital tools with the raw plastic value offered by hand sketches.
+                    </p>
+                </div>
+
+                <div class="about-meta-grid hidden-reveal">
+                    <div class="meta-box">
+                        <h3>Education</h3>
+                        <p>Mimar Sinan Fine Arts University<br>Department of Architecture</p>
+                    </div>
+                    <div class="meta-box">
+                        <h3>Proficiencies</h3>
+                        <p>Autodesk Revit, AutoCAD, SketchUp, LayOut, Site Analysis, Structural Sketching</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Yunus Emre Bilgin. All Rights Reserved.</p>
+        </footer>
+    </div> 
+    <script src="script.js"></script>
+</body>
+</html>
